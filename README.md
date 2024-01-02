@@ -2,15 +2,22 @@
 
 A new Flutter project.
 
-## Getting Started
+## GOTO AGORA CONSOLE
 
-This project is a starting point for a Flutter application.
+1. https://console.agora.io/
 
-A few resources to get you started if this is your first Flutter project:
+Click on config project and get your project APP_ID and Generate Temporary Token paste it into the
+Project ,
+Tokens are valid only for one day
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+How to use For one to one calling
+run this project first on a device then again change only change id here it should be unique for both devices
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```
+await agoraEngine.joinChannel(
+  token: token,
+  channelId: channelName,
+  options: options,
+  uid: 2, // UNIQUE for the second user, can be 1 or 0 (canvas)
+);
+```
